@@ -23,7 +23,7 @@ def stock():
 @app.route("/price/<item>")
 def price(item):
     response = requests.get(
-        f"https://prices.example.com/{item}", headers={"X-API-Key": config.API_KEY}, timeout=10
+        f"https://prices.example.com/{item}", headers={"X-API-Key": config.API_KEY}, timeout=15
     )
     return jsonify(response.json())
 
